@@ -6,9 +6,8 @@ public class Main{
        ArrayList<Person> people=new ArrayList<>();
        Employee e1 = new Employee("John", "Lennon", "Manager", 27045.78);
        Employee e2 = new Employee("George", "Harrison", "Developer", 50000.00);
-       Student s1 = new Student("Ringo", "Starr", 2.0); // GPA төмен (0 тг)
-       Student s2 = new Student("Paul", "McCartney", 3.5); // GPA жоғары (36660 тг)
-       people.add(e1);
+       Student s1 = new Student("Ringo", "Starr", 2.0);
+       Student s2 = new Student("Paul", "McCartney", 3.5);
        people.add(e2);
        people.add(s1);
        people.add(s2);
