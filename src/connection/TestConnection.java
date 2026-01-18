@@ -11,7 +11,7 @@ public class TestConnection {
         try {
             con = db.getConnection(); 
             if (con != null) {
-                System.out.println("Байланыс орнатылды!");
+                System.out.println("Connect created!");
                 Statement st = con.createStatement();
                 String sql="SELECT * FROM users";
                 ResultSet rs=st.executeQuery(sql);
@@ -21,21 +21,21 @@ public class TestConnection {
                     int id = rs.getInt("id");
                     String name = rs.getString("name");
                     String surname = rs.getString("surname");
-                    System.out.println("ID: " + id + ", Аты: " + name + ", Жөні: " + surname);
+                    System.out.println("ID: " + id + ", Name: " + name + ", Surname: " + surname);
                     
                 }
             }
         } catch (Exception e) {
-            System.out.println("Қате: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
         finally{
             try {
                 if (con != null) {
                     con.close();
-                    System.out.println("Байланыс жабылды.");
+                    System.out.println("Connect closed");
                 }
             } catch (Exception e) {
-                System.out.println("Байланысты жабу кезінде қате: " + e.getMessage());
+                System.out.println("Error during closing connect" + e.getMessage());
             }
         }
     }
